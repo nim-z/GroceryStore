@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String location = "28.704059,77.1025";
-                Intent intent = new Intent(MainActivity.this,Display.class);
+                Intent intent = new Intent(MainActivity.this,Map.class);
                 intent.putExtra("location",location);
                 startActivity(intent);
             }
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String location = "19.0760,72.8777";
-                Intent intent = new Intent(MainActivity.this,Display.class);
+                Intent intent = new Intent(MainActivity.this,Map.class);
                 intent.putExtra("location",location);
                 startActivity(intent);
             }
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String location = "12.9716,77.5946";
-                Intent intent = new Intent(MainActivity.this,Display.class);
+                Intent intent = new Intent(MainActivity.this,Map.class);
                 intent.putExtra("location",location);
                 startActivity(intent);
             }
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String location = "13.031744,80.181672";
-                Intent intent = new Intent(MainActivity.this,Display.class);
+                Intent intent = new Intent(MainActivity.this,Map.class);
                 intent.putExtra("location",location);
                 startActivity(intent);
             }

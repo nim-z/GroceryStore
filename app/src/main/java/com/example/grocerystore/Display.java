@@ -32,6 +32,7 @@ public class Display extends AppCompatActivity {
     private Boolean ok;
     private Boolean res;
     private Call<Result> callStores;
+    private ArrayList<Location> locations;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +56,11 @@ public class Display extends AppCompatActivity {
     {
         callStores.enqueue(call);
     }
+    void locationsAppend(Location loc,String address)
+    {
+        loc.setAddress(address);
+        locations.add(loc);
+    }
     Callback<Result> call = new Callback<Result>() {
         @Override
         public void onResponse(@NotNull Call<Result> call, @NotNull Response<Result> response) {
@@ -69,13 +75,14 @@ public class Display extends AppCompatActivity {
             for(Stores stores : response.body().getStoreList())
             {
                 String title = stores.getTitle();
-                Geometry geometry=stores.getGeo();
-                Location loc=geometry.getLoc();
+                Location loc=stores.getGeo().getLoc();
                 String address = stores.getAddress();
+
                 String final_string = counter + ". " + title + "\n" + address+ "\n"+ loc.getLatitude() + "\n"+ loc.getLongitude() + "\n\n\n";
-                Spannable sb = new SpannableString(final_string);
-                sb.setSpan(new StyleSpan(Typeface.BOLD),final_string.indexOf(title),final_string.indexOf(title)+title.length(),Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                text.append(sb);
+                locationsAppend(loc,address);
+                //Spannable sb = new SpannableString(final_string);
+                //sb.setSpan(new StyleSpan(Typeface.BOLD),final_string.indexOf(title),final_string.indexOf(title)+title.length(),Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                //text.append(sb);
                 counter++;
             }
         }
@@ -85,4 +92,5 @@ public class Display extends AppCompatActivity {
             text.setText(t.getMessage());
         }
     };
+
 }
