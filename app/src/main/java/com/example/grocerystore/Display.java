@@ -69,8 +69,10 @@ public class Display extends AppCompatActivity {
             for(Stores stores : response.body().getStoreList())
             {
                 String title = stores.getTitle();
+                Geometry geometry=stores.getGeo();
+                Location loc=geometry.getLoc();
                 String address = stores.getAddress();
-                String final_string = counter + ". " + title + "\n" + address+ "\n\n\n";
+                String final_string = counter + ". " + title + "\n" + address+ "\n"+ loc.getLatitude() + "\n"+ loc.getLongitude() + "\n\n\n";
                 Spannable sb = new SpannableString(final_string);
                 sb.setSpan(new StyleSpan(Typeface.BOLD),final_string.indexOf(title),final_string.indexOf(title)+title.length(),Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
                 text.append(sb);

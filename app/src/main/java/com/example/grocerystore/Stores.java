@@ -8,7 +8,9 @@ public class Stores {
     private String title;
     @SerializedName("vicinity")
     private String address;
-    public Stores(String title, String address)
+    @SerializedName("geometry")
+    private Geometry geo;
+    public Stores(String title, String address, Geometry geo)
     {
         this.title = title;
         this.address = address;
@@ -21,4 +23,6 @@ public class Stores {
     public String getAddress() {
         return address;
     }
+
+    public Geometry getGeo() { return geo;}
 }

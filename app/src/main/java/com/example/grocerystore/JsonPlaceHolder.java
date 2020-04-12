@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface JsonPlaceHolder {
-    String API_KEY = "AIzaSyCb4LFM1Z8CawASB9spTTv8k-PNplC8B7I";
+    String API_KEY = "AIzaSyCU5Du8ihRup28Smjhh4UbowUzCDKx98tk";
     int radius = 20000;
     String type = "grocery_or_supermarket";
     String rank = "distance";
