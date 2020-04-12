@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="48sp"
+        android:text="Choose A City:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/delhi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="20dp"
+        card_view:cardBackgroundColor="@android:color/holo_blue_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.049">
+
+        <TextView
+            android:id="@+id/delhi_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delhi"
+            android:gravity="center"
+            android:clickable="false"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:textSize="26sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bangalore"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        app:cardBackgroundColor="@android:color/holo_red_dark"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delhi">
+
+        <TextView
+            android:id="@+id/bangalore_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Bangalore"
+            android:clickable="false"
+            android:textColor="@android:color/white"
+            android:textSize="26sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mumbai"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        app:cardBackgroundColor="@android:color/holo_green_dark"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bangalore">
+
+        <TextView
+            android:id="@+id/mumbai_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Mumbai"
+            android:clickable="false"
+            android:textColor="@android:color/white"
+            android:textSize="26sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="401dp"
+        android:id="@+id/chennai"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@android:color/holo_orange_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mumbai"
+        app:layout_constraintVertical_bias="0.0">
+    <TextView
+        android:id="@+id/chennai_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Chennai"
+        android:textColor="@android:color/white"
+        android:textSize="26sp" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
